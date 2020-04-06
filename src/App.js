@@ -4,7 +4,7 @@ import './App.css';
 const App = () => {
   return (
     <div className="App">
-      Simpl HTML
+      hi hi hihihi
       <ul>
         <li>css</li>
         <li>html</li>
