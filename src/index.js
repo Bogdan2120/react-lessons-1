@@ -4,9 +4,10 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter} from "react-router-dom";
+import state from "./redux/state";
 
 
-let posts =[
+/*let posts =[
     {
         id: 1,
         message: 'Hi!',
@@ -51,12 +52,12 @@ let messages = [
         id: 1,
         message: 'Yo'
     }
-];
+];*/
 
 ReactDOM.render(
     <React.StrictMode>
         <BrowserRouter>
-            <App posts={posts} dialogs={dialogs} messages={messages}/>
+            <App stateApp={state}/>
         </BrowserRouter>
     </React.StrictMode>,
     document.getElementById('root')
