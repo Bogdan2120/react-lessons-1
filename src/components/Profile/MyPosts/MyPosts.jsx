@@ -4,21 +4,7 @@ import Post from "./Post/Post";
 
 const MyPosts = (props) => {
 
-    /*let posts =[
-        {
-            id: 1,
-            message: 'Hi!',
-            like: 25
-        },
-        {
-            id: 2,
-            message: 'How do you do?',
-            like: 12
-        }
-        ];*/
-/*
-    let postElement = posts.map(p => <Post messages={p.message} like={p.like}/>);
-*/
+    let postElement = props.posts.map(p => <Post messages={p.message} like={p.like}/>);
 
     return (
         <div className={s.posts}>
@@ -32,10 +18,7 @@ const MyPosts = (props) => {
                 </div>
             </div>
             <div className={s.posts}>
-                <Post messages={props.message} like={props.like}/>
-{/*
                 { postElement }
-*/}
             </div>
         </div>
     );
