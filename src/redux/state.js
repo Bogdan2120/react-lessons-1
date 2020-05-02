@@ -17,19 +17,27 @@ let state = {
         dialogs: [
             {
                 id: 1,
-                name: 'Sasha'
+                name: 'Sasha',
+                image: 'https://cache.kwork.ru/pics/t3/47/435505-1535454647.jpg',
+                status: 'online'
             },
             {
                 id: 2,
-                name: 'Masha'
+                name: 'Masha',
+                image: 'https://user-life.com/uploads/posts/2018-08/1535608847_kak-udalit-avatarku-ubrat-postavit-sdelat-zagruzit-dobavit-foto-vkontakte-dlya-telegramma-skaypa-vayber-diskorda.jpg',
+                status: 'online'
             },
             {
                 id: 3,
-                name: 'Vitya'
+                name: 'Vitya',
+                image: 'https://ispolnu.ru/uploads/services/20180618/1529316303dbca.jpg',
+                status: 'offline'
             },
             {
                 id: 4,
-                name: 'Katya'
+                name: 'Katya',
+                image: 'https://steamuserimages-a.akamaihd.net/ugc/878625635424782000/DB798C0A0F8E97035012AC04ADD5FFA8F49ED590/',
+                status: 'offline'
             }
         ],
         messages: [
@@ -38,15 +46,66 @@ let state = {
                 message: 'Hi!'
             },
             {
-                id: 1,
+                id: 2,
                 message: 'How do you do?'
             },
             {
-                id: 1,
+                id: 3,
+                message: 'Yo'
+            },
+            {
+                id: 4,
+                message: 'Hi!'
+            },
+            {
+                id: 5,
+                message: 'How do you do?'
+            },
+            {
+                id: 6,
                 message: 'Yo'
             }
         ]
+    },
+    navbarPage: {
+        sidebar: [
+            {
+                id: 1,
+                name: 'Sasha',
+                image: 'https://cache.kwork.ru/pics/t3/47/435505-1535454647.jpg',
+                status: 'online'
+            },
+            {
+                id: 2,
+                name: 'Masha',
+                image: 'https://user-life.com/uploads/posts/2018-08/1535608847_kak-udalit-avatarku-ubrat-postavit-sdelat-zagruzit-dobavit-foto-vkontakte-dlya-telegramma-skaypa-vayber-diskorda.jpg',
+                status: 'online'
+            },
+            {
+                id: 3,
+                name: 'Vitya',
+                image: 'https://ispolnu.ru/uploads/services/20180618/1529316303dbca.jpg',
+                status: 'offline'
+            },
+            {
+                id: 4,
+                name: 'Katya',
+                image: 'https://steamuserimages-a.akamaihd.net/ugc/878625635424782000/DB798C0A0F8E97035012AC04ADD5FFA8F49ED590/',
+                status: 'offline'
+            }
+        ]
     }
+}
+
+
+export let addPost = (postMessage) => {
+    let newPost = {
+        id: 3,
+        message: postMessage,
+        like: 0
+    };
+
+    state.profilePage.posts.push(newPost);
 }
 
 export default state;

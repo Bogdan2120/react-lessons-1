@@ -20,8 +20,28 @@
 .item a:hover {
     padding-bottom: 10px;
     text-decoration: underline;
+    color: #27aae1;
 }
 
 .item a.activeLink {
-    color: gold;
+    color: #8dc63f;
+}
+
+.onlineFriends {
+    margin-top: 70px;
+}
+
+.heading {
+    height: 40px;
+    background-color: #8dc63f;
+    color: white;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.heading span {
+    display: block;
+    padding-top: 5px;
+    font-size: 22px;
+    font-weight: 600 ;
 }

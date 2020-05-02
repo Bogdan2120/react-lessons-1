@@ -9,25 +9,20 @@
     border-right: 2px solid #efefef;
 }
 
-.dialogsItems .active{
-    color: gold;
-}
-
-
 .dialogsItems .dialog {
     padding-top: 15px;
 }
 
+
 .messages {
-    padding: 20px 30px 0 40px;
+    position: relative;
+    padding: 20px 30px 40px 40px;
 }
 
-.messages .message {
-    display: block;
-    margin-top: 10px;
-    height: 30px;
-    padding: 20px;
-    background-color: #6d6e71;
-    color: white;
-    border-radius: 15px;
+.addMessage {
+    margin-top: 30px;
 }
+
+.addMessage textarea {
+}
+
