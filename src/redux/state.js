@@ -1,3 +1,5 @@
+import {rerenderEntireTree} from "../render";
+
 let state = {
     profilePage: {
         posts: [
@@ -11,7 +13,8 @@ let state = {
                 message: 'How do you do?',
                 like: 12
             }
-        ]
+        ],
+        newPostText: 'You text'
     },
     dialogsPage: {
         dialogs: [
@@ -65,7 +68,8 @@ let state = {
                 id: 6,
                 message: 'Yo'
             }
-        ]
+        ],
+        newMessageText: 'text'
     },
     navbarPage: {
         sidebar: [
@@ -98,14 +102,43 @@ let state = {
 }
 
 
-export let addPost = (postMessage) => {
+
+        /*Profile New Post*/
+
+export let addPost = () => {
     let newPost = {
         id: 3,
-        message: postMessage,
+        message: state.profilePage.newPostText,
         like: 0
     };
 
     state.profilePage.posts.push(newPost);
-}
+    state.profilePage.newPostText = '';
+    rerenderEntireTree(state);
+};
+
+export let updateNewTextPost = (newText) => {
+    state.profilePage.newPostText = newText;
+    rerenderEntireTree(state);
+};
+
+
+                /*Dialogs New Massage*/
+export let addMessage = () => {
+    let newMessage = {
+        id: 7,
+        message: state.dialogsPage.newMessageText
+    };
+
+    state.dialogsPage.messages.push(newMessage);
+    state.dialogsPage.newMessageText = '';
+    rerenderEntireTree(state);
+};
+
+export let updateNewTexMessage = (newText) => {
+    state.dialogsPage.newMessageText = newText;
+    rerenderEntireTree(state);
+};
+
 
 export default state;
