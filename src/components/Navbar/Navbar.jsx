@@ -2,12 +2,8 @@ import React from 'react';
 import s from './Navbar.module.css';
 import {NavLink} from "react-router-dom";
 import Sidebar from "./Sidebar/Sidebar";
-import DialogItem from "../Dialogs/DialogItem/DialogItem";
 
 const Navbar = (props) => {
-
-    let sidebarElement = props.state.sidebar.map(d => <Sidebar name={d.name}  image={d.image} />);
-
     return (
         <div className={s.nav}>
             <nav>
@@ -27,12 +23,7 @@ const Navbar = (props) => {
                     <NavLink to="/settings" activeClassName={s.activeLink}>Settings</NavLink>
                 </div>
             </nav>
-            <div className={s.onlineFriends}>
-                <div className={s.heading}>
-                    <span>My Friends</span>
-                </div>
-                {sidebarElement}
-            </div>
+           <Sidebar state={props.state}></Sidebar>
         </div>
     );
 }

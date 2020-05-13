@@ -1,11 +1,18 @@
 import React from 'react';
 import s from './Sidebar.module.css';
-import {NavLink} from "react-router-dom";
+import SidebarItem from "./SidebarItem/SidebarItem";
+
+
 
 const Sidebar = (props) => {
+    let sidebarElement = props.state.sidebar.map(d => <SidebarItem name={d.name}  image={d.image} />);
+
     return (
-        <div className={s.item}>
-            <img src={props.image} alt={props.name}/>
+        <div className={s.onlineFriends}>
+            <div className={s.heading}>
+                <span>My Friends</span>
+            </div>
+            {sidebarElement}
         </div>
     );
 }

@@ -1,11 +1,18 @@
-.item {
-    display: inline-block;
-    padding-right: 10px;
-    margin-top: 20px;
+.onlineFriends {
+    margin-top: 70px;
 }
 
-.item img {
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
+.heading {
+    height: 40px;
+    background-color: #8dc63f;
+    color: white;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.heading span {
+    display: block;
+    padding-top: 5px;
+    font-size: 22px;
+    font-weight: 600 ;
 }
