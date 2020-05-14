@@ -2,7 +2,6 @@ import React from "react";
 import s from "./Dialogs.module.css";
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
-import {add_Message_Creator, update_New_Text_Message_Creator} from "../../redux/dialogsReducer";
 
 
 const Dialogs = (props) => {
@@ -14,13 +13,13 @@ const Dialogs = (props) => {
     let newMassageElement = props.state.newMessageText;
 
 
-    let onSendMessageClick = () => {
-        props.dispatch(add_Message_Creator());
+    let onAddMessage = () => {
+        props.onSendMessageClick();
     };
 
     let onMessageChange = (e) => {
         let text = e.target.value;
-        props.dispatch(update_New_Text_Message_Creator(text));
+        props.updateNewTextMessage(text);
     };
 
     return (
@@ -35,7 +34,7 @@ const Dialogs = (props) => {
                               value={newMassageElement}
                               placeholder='Enter your massage'
                     />
-                    <button onClick={onSendMessageClick}>Send</button>
+                    <button onClick={onAddMessage}>Send</button>
                 </div>
             </div>
         </div>
