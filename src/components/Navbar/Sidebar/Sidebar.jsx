@@ -5,7 +5,7 @@ import SidebarItem from "./SidebarItem/SidebarItem";
 
 
 const Sidebar = (props) => {
-    let sidebarElement = props.state.sidebar.map(d => <SidebarItem name={d.name}  image={d.image} />);
+    let sidebarElement = props.navbarPage.sidebar.map(d => <SidebarItem name={d.name}  image={d.image} />);
 
     return (
         <div className={s.onlineFriends}>
