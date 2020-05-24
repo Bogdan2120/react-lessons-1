@@ -1,0 +1,29 @@
+.container {
+   padding: 20px;
+}
+.userItem {
+    display: grid;
+    grid-template-areas: "a i b";
+    grid-template-rows: 60px 1fr;
+    grid-auto-columns: 1fr 10fr 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 50px;
+    border-bottom: 1px solid #6d6e71;
+    border-top: 1px solid #6d6e71;
+    padding: 15px 0 0 0;
+}
+.avatar {
+    grid-area: a;
+}
+.avatar img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 100%;
+}
+.information {
+    grid-area: i;
+}
+.button {
+    grid-area: b;
+}
