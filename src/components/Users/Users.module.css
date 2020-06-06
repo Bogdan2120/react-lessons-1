@@ -26,6 +26,16 @@
 .button {
     grid-area: b;
 }
-.selectedPage {
+.selectedActivePage {
     font-weight: bold;
+    background-color: red;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+
+}
+.selectedPage {
+    width: 10px;
+    height: 10px;
+    padding-right: 15px;
 }
