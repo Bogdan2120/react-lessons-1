@@ -26,3 +26,6 @@
 .button {
     grid-area: b;
 }
+.selectedPage {
+    font-weight: bold;
+}
